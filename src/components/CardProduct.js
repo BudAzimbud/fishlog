@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import {Card, CardBody, CardTitle, Button, CardSubtitle, CardText} from 'reactstrap' 
+import React from 'react'
+import {Card, CardBody, CardTitle, } from 'reactstrap' 
 function CardProduct({product}) {
   return (
     <div className='mt-3 'style={{cursor:'pointer'}} >

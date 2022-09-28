@@ -8,6 +8,7 @@ export const getListProduct = createAsyncThunk(
     const product = await axios.get(
       "https://marketdevb2bbe.fishlog.co.id/api/cat/product?page=" + page
     );
+
     return {
       list: product.data.data.data,
       currentPage: product.data.data.current_page,
@@ -21,9 +22,15 @@ export const productSlice = createSlice({
   initialState: {
     products: [],
     currentPage: 0,
-    lastPage:0
+    lastPage:0,
+    page:1
   },
-  reducers: {},
+  reducers: {
+    setPage : (state,action)=>{
+        state.page = state.page + action.payload.page
+    },
+
+  },
   extraReducers: (builder) => {
     builder.addCase(getListProduct.fulfilled, (state, action) => {
       state.products = action.payload.list;
@@ -33,6 +40,6 @@ export const productSlice = createSlice({
   },
 });
 
-export const {} = productSlice.actions;
+export const {setPage} = productSlice.actions;
 
 export default productSlice.reducer;
