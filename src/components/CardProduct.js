@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import {Card, CardBody, CardTitle, Button, CardSubtitle, CardText} from 'reactstrap' 
 function CardProduct({product}) {
-    console.log(product)
   return (
     <div className='mt-3'>
          <Card
