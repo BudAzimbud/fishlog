@@ -22,8 +22,8 @@ function Example(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar className="px-5" {...args} dark color="dark">
+    <div className="w-full fixed-top  bg-danger " >
+      <Navbar className="px-5 w-full bg-danger" {...args} dark color="dark">
         <NavbarBrand href="/">FishLog </NavbarBrand>
         <NavItem className="list-unstyled">
           <Input placeholder="search" />

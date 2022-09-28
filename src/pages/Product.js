@@ -13,11 +13,11 @@ function Product() {
   }, [page]);
 
   return (
-    <div>
+    <div >
         <Navbar/>
     <div className="px-5 py-2">
       {products.length > 0 ? (
-        <Row className="mt-1  ">
+        <Row className="mt-5  ">
           {products.map((product) => (
             <Col sm={6} md={6} xl={3} key={product.id}>
               <CardProduct product={product} />
